@@ -4015,3 +4015,34 @@ a {
   padding-bottom:115px !important
  }
 }
+
+/* Added styles */
+span.page-title {
+
+}
+
+.navbar-brand {
+    font-size: 56px !important;
+    margin-right: 208px;
+    font-weight:700;
+    background: linear-gradient(90deg, #BD00EB, #E85A0E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-logo {
+    margin-top: -18px;
+}
+
+.button-hero {
+    margin-bottom: 96px;
+}
+
+.offer {
+    background: url(../img/home/tamanna-rumee-mIqyYpSNq3o-unsplash-crop.jpg) center no-repeat;
+    /* (Rumee, 2020) */
+}
+
+.offer__content > * {
+    color: #fff !important;
+}

@@ -7,7 +7,7 @@ namespace Cosmic_Electronics_Project.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.pageName = "Catalogue";
+			ViewBag.pageName = "Catalogue";
             return View(SampleData());
         }
 
