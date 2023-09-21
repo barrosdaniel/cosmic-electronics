@@ -1,4 +1,6 @@
-﻿namespace Cosmic_Electronics_Project.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Cosmic_Electronics_Project.Models
 {
 	public class Product
 	{
@@ -7,7 +9,7 @@
 		public string Description { get; set; }
 		public string Category { set; get; }
 
-		// [Column(TypeName = "decimal(8, 2)")]
+		[Column(TypeName = "decimal(8, 2)")]
 		public decimal Price { get; set; }
 		public string Image { set; get; }
 	}
