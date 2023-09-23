@@ -12,6 +12,11 @@ namespace Cosmic_Electronics_Project.Controllers
             repository = repo;
         }
 
-        public IActionResult Index() => View(repository.Products);
+        public IActionResult Index(string category = null)
+        {
+            ViewBag.pageName = "Catalogue";
+            return View(repository.Products
+                        .Where(p => category == null || p.Category == category));
+        }
 	}
 }
