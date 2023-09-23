@@ -27,23 +27,11 @@
 						<li><a class="active" href="#"><span>Category</span> : @Model.Category</a></li>
 					</ul>
 					<p>@Model.Description</p>
-					<div class="product_count">
-						<label for="quantity">Quantity:</label>
-
-						<input type="text" name="quantity" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-
-						<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-								class="increase items-count" type="button">
-							<i class="fa fa-angle-up"></i>
-						</button>
-
-						<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-								class="reduced items-count" type="button">
-							<i class="fa fa-angle-down"></i>
-						</button>
-					</div>
-
 					<form id="@Model?.ProductID" asp-page="/Cart" method="post">
+						<div class="product_count me-3">
+							<label for="quantity">Quantity:</label>
+							<input type="number" name="quantity" id="quantity" min="1">
+						</div>
 						<input type="hidden" asp-for="ProductID" />
 						<input type="hidden" name="returnUrl"
 								value="@ViewContext.HttpContext.Request.PathAndQuery()" />
