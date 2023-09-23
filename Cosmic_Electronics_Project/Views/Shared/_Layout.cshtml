@@ -14,9 +14,7 @@
 </head>
 
 <body>
-
     <!--================ Start Header Menu Area =================-->
-
     <header class="header_area">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -33,19 +31,11 @@
                     </button>
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-                            <li class="nav-item @(ViewBag.pageName=="Home"?"active":"")"><a class="nav-link" href="Home">Home</a></li>
-                            <li class="nav-item submenu dropdown @(ViewBag.pageName=="Catalogue"?"active":"")">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                   aria-expanded="false">Shop</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="Catalogue">Products</a></li>
-                                </ul>
-                            </li>
-
+                            <li class="nav-item @(ViewBag.pageName=="Home"?"active":"")"><a class="nav-link" href="/Home">Home</a></li>
+							<li class="nav-item @(ViewBag.pageName=="Catalogue"?"active":"")"><a class="nav-link" href="/Catalogue">Shop</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                             <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
                         </ul>
-
                         <ul class="nav-shop">
                             <li class="nav-item"><button><i class="fa fa-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
                             <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
@@ -55,7 +45,6 @@
             </nav>
         </div>
     </header>
-
 	<!--================ End Header Menu Area =================-->
 
     <main>
@@ -63,7 +52,6 @@
     </main>
 
 	<!--================ Start footer Area  =================-->
-
 	<footer class="footer">
 		<div class="footer-area">
 			<div class="container">
@@ -72,7 +60,12 @@
 						<div class="single-footer-widget tp_widgets">
 							<h4 class="footer_title large_title">About Us</h4>
 							<p>
-								Cosmic Electronics is your premier source for the latest in tech wonders. Our handpicked collection features computers, mobiles, televisions, and games that cater to your tech cravings. With a passion for innovation, we're committed to making your shopping experience stellar as you embark on a journey through the cosmos of cutting-edge technology.
+								Cosmic Electronics is your premier source for the latest 
+								in tech wonders. Our handpicked collection features computers, 
+								mobiles, televisions, and games that cater to your tech 
+								cravings. With a passion for innovation, we're committed to 
+								making your shopping experience stellar as you embark on a 
+								journey through the cosmos of cutting-edge technology.
 							</p>
 						</div>
 					</div>
@@ -133,9 +126,8 @@
 			</div>
 		</div>
 	</footer>
-
 	<!--================ End footer Area  =================-->
-
+	
 	<script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

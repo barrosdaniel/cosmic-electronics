@@ -20,5 +20,13 @@ namespace Cosmic_Electronics_Project.Controllers
             return View(repository.Products
                         .Where(p => category == null || p.Category == category));
         }
+
+        public IActionResult ProductDetails(int productId)
+        {
+            ViewBag.pageName = "Product Details";
+            Product? product = repository.Products
+                                .FirstOrDefault(p => p.ProductID == productId);
+            return View(product);
+        }
 	}
 }
