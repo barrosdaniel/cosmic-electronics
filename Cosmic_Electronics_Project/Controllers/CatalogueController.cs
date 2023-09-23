@@ -12,6 +12,8 @@ namespace Cosmic_Electronics_Project.Controllers
             repository = repo;
         }
 
+        [Route("Catalogue")]
+        [Route("Catalogue/{category}")]
         public IActionResult Index(string category = null)
         {
             ViewBag.pageName = "Catalogue";
