@@ -80,14 +80,6 @@ namespace Cosmic_Electronics_Project.Models
                         Category = "Mobiles",
                         Price = 339,
                         Image = "product8.png"
-                    },
-                    new Product
-                    {
-                        Name = "Acer Laptop",
-                        Description = "Acer Laptop Windows 11",
-                        Category = "Computers",
-                        Price = 1599,
-                        Image = "product1.png"
                     }
                 );
                 context.SaveChanges();
