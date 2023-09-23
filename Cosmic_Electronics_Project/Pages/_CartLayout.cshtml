@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!--================ Start Header Menu Area =================-->
     <header class="header_area">
         <div class="main_menu">
@@ -60,11 +60,13 @@
     <!-- ================ end banner area ================= -->
 
     <main>
-        @RenderBody()
+		<div class="container">
+			@RenderBody()
+		</div>
     </main>
 
 	<!--================ Start footer Area  =================-->
-	<footer class="footer">
+	<footer class="footer mt-auto">
 		<div class="footer-area">
 			<div class="container">
 				<div class="row">

@@ -22,7 +22,7 @@
 			<div class="col-lg-5 offset-lg-1">
 				<div class="s_product_text">
 					<h3>@Model.Name</h3>
-					<h2>@Model.Price</h2>
+					<h2>@Model.Price.ToString("c")</h2>
 					<ul class="list">
 						<li><a class="active" href="#"><span>Category</span> : @Model.Category</a></li>
 					</ul>
@@ -43,7 +43,12 @@
 						</button>
 					</div>
 
-					<button type="submit" class="btn btn-primary"> Add To Cart </button>
+					<form id="@Model?.ProductID" asp-page="/Cart" method="post">
+						<input type="hidden" asp-for="ProductID" />
+						<input type="hidden" name="returnUrl"
+								value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+						<button type="submit" class="btn btn-primary">Add To Cart</button>
+                    </form>
 				</div>
 			</div>
 		</div>
