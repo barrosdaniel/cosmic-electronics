@@ -21,6 +21,7 @@ namespace Cosmic_Electronics_Project.Controllers
                         .Where(p => category == null || p.Category == category));
         }
 
+        [Route("Product/{productId}")]
         public IActionResult ProductDetails(int productId)
         {
             ViewBag.pageName = "Product Details";
