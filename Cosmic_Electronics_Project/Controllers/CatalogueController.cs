@@ -1,14 +1,17 @@
-﻿using Cosmic_Electronics_Project.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Cosmic_Electronics_Project.Models;
 
 namespace Cosmic_Electronics_Project.Controllers
 {
     public class CatalogueController : Controller
     {
-        public IActionResult Index()
+        private IStoreRepository repository;
+
+        public CatalogueController(IStoreRepository repo)
         {
-			ViewBag.pageName = "Catalogue";
-            return View();
+            repository = repo;
         }
+
+        public IActionResult Index() => View(repository.Products);
 	}
 }
