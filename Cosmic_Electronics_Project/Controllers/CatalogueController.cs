@@ -16,7 +16,7 @@ namespace Cosmic_Electronics_Project.Controllers
         [Route("Catalogue/{category}")]
         public IActionResult Index(string? category = null)
         {
-            ViewBag.pageName = "Catalogue";
+            ViewBag.pageName = "Shop";
             return View(repository.Products
                         .Where(p => category == null || p.Category == category));
         }
