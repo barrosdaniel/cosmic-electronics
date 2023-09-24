@@ -33,8 +33,7 @@
 							<input type="number" name="quantity" id="quantity" min="1" value="1">
 						</div>
 						<input type="hidden" asp-for="ProductID" />
-						<input type="hidden" name="returnUrl"
-								value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+						<input type="hidden" name="returnUrl" value="/Catalogue" />
 						<button type="submit" class="btn btn-primary">Add To Cart</button>
                     </form>
 				</div>
