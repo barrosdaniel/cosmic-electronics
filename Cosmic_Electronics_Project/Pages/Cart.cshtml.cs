@@ -34,8 +34,15 @@ namespace Cosmic_Electronics_Project.Pages
 
             if (product != null)
             {
-                Cart.AddItem(product, Quantity);
+                Cart?.AddItem(product, Quantity);
             }
+            return RedirectToPage(new { returnUrl = returnUrl });
+        }
+
+        public IActionResult OnPostRemove(long productId, string returnUrl)
+        {
+            Cart?.RemoveLine(Cart.Lines.First(cl =>
+                cl.Product.ProductID == productId).Product);
             return RedirectToPage(new { returnUrl = returnUrl });
         }
     }
